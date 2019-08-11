@@ -32,8 +32,8 @@ import java.util.*;
            }
            
            newArr[size] = value;
-             size++; 
-             arr = newArr;
+           size++; 
+           arr = newArr;
           }
       }
 
