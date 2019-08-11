@@ -2,7 +2,7 @@
 
 import java.util.*;
 
-class Main {
+class BreadthFirstSearch {
   static class Node {
     int id;
     List<Node> adj;
@@ -12,7 +12,32 @@ class Main {
     }
   }
 
-  public static void main(String[] args) {
+  public static boolean BFS(Node root, Node target) {
+    LinkedList<Node> queue = new LinkedList<>();
+    Set<Node> visited = new HashSet<>();
+
+    queue.add(root);
+    return BFSsearch(target, queue, visited);
+  }
+
+  public static boolean BFSsearch(Node target, LinkedList<Node> queue, Set<Node> visited) {
+    
+    if(queue.isEmpty()) return false;
+    Node current = queue.remove();
+    System.out.println(current.id); // PRINT THE ORDER OF VISITED NODES
+    if(current == target) return true;
+
+    visited.add(current);
+    for(Node n : current.adj) {
+      if(visited.contains(n)) continue;
+      queue.add(n);
+    }
+
+    return BFSsearch(target, queue, visited);
+  }
+}
+
+ public static void main(String[] args) {
     Node one = new Node(1);
     Node two = new Node(2);
     Node three = new Node(3);
@@ -46,28 +71,3 @@ class Main {
 
     System.out.println(BFS(one, ten));  
   }
-
-  public static boolean BFS(Node root, Node target) {
-    LinkedList<Node> queue = new LinkedList<>();
-    Set<Node> visited = new HashSet<>();
-
-    queue.add(root);
-    return BFSsearch(target, queue, visited);
-  }
-
-  public static boolean BFSsearch(Node target, LinkedList<Node> queue, Set<Node> visited) {
-    
-    if(queue.isEmpty()) return false;
-    Node current = queue.remove();
-    System.out.println(current.id); // PRINT THE ORDER OF VISITED NODES
-    if(current == target) return true;
-
-    visited.add(current);
-    for(Node n : current.adj) {
-      if(visited.contains(n)) continue;
-      queue.add(n);
-    }
-
-    return BFSsearch(target, queue, visited);
-  }
-}
