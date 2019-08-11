@@ -1,5 +1,5 @@
 /* My implementation of a simple HashTable
-*  It only allows key-value pairs in the form of String-Integer where the Integer must >= 0
+*  It allows key-value pairs in the form of String-Integer where the Integer is >= 0
 *  It uses chaining to address collisions
 *  The function get() returns the value associated with the key or -1 if the key was not found
 */
