@@ -1,7 +1,6 @@
 /* My implementation of a simple HashTable
 *  It allows key-value pairs in the form of String-Integer where the Integer is >= 0
 *  It uses chaining to address collisions
-*  The function get() returns the value associated with the key or -1 if the key was not found
 */
 
 class HashTable{ 
@@ -44,7 +43,8 @@ class HashTable{
     curr.next = arr[idx];
     arr[idx] = curr;
   }
-
+  
+  // Returns the value associated with the key or -1 if the key was not found
   public int get(String key) {
     int idx = hashF(key);
     if(arr[idx] == null) return -1;
