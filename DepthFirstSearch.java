@@ -12,6 +12,25 @@ class DepthFirstSearch {
     }
   }
 
+  public static boolean DFS(Node root, Node target) {
+    Set<Node> visited = new HashSet<>();
+
+    return DFSsearch(root, target, visited);
+  }
+
+  public static boolean DFSsearch(Node root, Node target, Set<Node> visited) {
+    System.out.println(root.id); // PRINT ORDER OF EXECUTION
+    if(root == target) return true;
+    visited.add(root);
+
+    for(Node n : root.adj)  {
+      if(visited.contains(n)) continue;
+      if(DFSsearch(n, target, visited)) return true;
+    }
+
+    return false;
+  }
+  
   public static void main(String[] args) {
     Node one = new Node(1);
     Node two = new Node(2);
@@ -45,24 +64,5 @@ class DepthFirstSearch {
     four.adj.add(three);
 
     System.out.println(DFS(one, four));  
-  }
-
-  public static boolean DFS(Node root, Node target) {
-    Set<Node> visited = new HashSet<>();
-
-    return DFSsearch(root, target, visited);
-  }
-
-  public static boolean DFSsearch(Node root, Node target, Set<Node> visited) {
-    System.out.println(root.id); // PRINT ORDER OF EXECUTION
-    if(root == target) return true;
-    visited.add(root);
-
-    for(Node n : root.adj)  {
-      if(visited.contains(n)) continue;
-      if(DFSsearch(n, target, visited)) return true;
-    }
-
-    return false;
   }
 }
