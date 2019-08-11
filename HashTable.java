@@ -79,7 +79,7 @@ class HashTable{
       return false;
     }
 
-    public void printContents() {
+    public void toString() {
       for(int x = 0; x < 10; x++) {
         Node it =  arr[x];
         System.out.println("Index: "+ x);
@@ -100,7 +100,7 @@ class HashTable{
       ht.put("fa21wbr",99);
       ht.put("bbwwegqa",12);
 
-     ht.printContents();
+     ht.toString();
     }
   }
 
