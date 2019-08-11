@@ -51,14 +51,11 @@ import java.util.*;
       }
       
       public static void main(String[] args) {
-          ArrayList arr = new ArrayList();
-
-         for(int x = 0; x < 10; x++) {
-           arr.add(x);
-         }
-
-          arr.remove(4);
-          arr.printContents();
-          
+         ArrayList arr = new ArrayList();
+       
+         for(int x = 0; x < 10; x++) arr.add(x);
+       
+         arr.remove(4);
+         arr.printContents();
     }
 }
