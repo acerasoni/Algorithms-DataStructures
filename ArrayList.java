@@ -1,6 +1,6 @@
-/* Simple implementation for an ArrayList aka resizeable array for positive integers
+/* Simple implementation for an ArrayList of positive integers
 *  ArrayList can only increase in size (in that deletion will not shrink its size) 
-*  -1 represents an empty slot
+*  An empty slot is represented by -1
 *  Insertion is O(n) amortized to O(1)
 */
 
