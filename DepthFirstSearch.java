@@ -2,7 +2,7 @@
 
 import java.util.*;
 
-class Main {
+class DepthFirstSearch {
   static class Node {
     int id;
     List<Node> adj;
