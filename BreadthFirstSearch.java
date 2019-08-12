@@ -1,4 +1,8 @@
-// My implementation of Breadth First Search
+/**
+ * @author Andrea Cerasoni
+ * My Personal Implementation of a Breadth First Search
+ * Developed to improve my understanding of the algorithm
+ * */
 
 import java.util.*;
 
