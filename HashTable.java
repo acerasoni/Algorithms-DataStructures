@@ -17,7 +17,7 @@ class HashTable{
     }
   }
 
-   Node[] arr = new Node[10];
+   Node[] arr = new Node[1000];
 
   public int hashF(String key) {
     int result = 0;
@@ -25,7 +25,7 @@ class HashTable{
       result += key.charAt(x);
     }
 
-    return result % 10;
+    return result % 1000;
   }
 
   public void put(String key, int value){
@@ -83,7 +83,7 @@ class HashTable{
     }
 
     public void printContents() {
-      for(int x = 0; x < 10; x++) {
+      for(int x = 0; x < 1000; x++) {
         Node it =  arr[x];
         System.out.println("Index: "+ x);
         while(it != null) {
