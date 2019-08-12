@@ -1,7 +1,10 @@
-/* My implementation of a simple HashTable
-*  It allows key-value pairs in the form of String-Integer where the Integer is >= 0
-*  It uses chaining to address collisions
-*/
+/**
+ * @author Andrea Cerasoni
+ * My Personal Implementation of a Singly Linked List
+ * Developed to improve my understanding of the data structure
+ * It allows key-value pairs in the form of String-Integer where the Integer is >= 0
+ * Utilises chaining to address collisions
+ * */
 
 class HashTable{ 
   static class Node{
