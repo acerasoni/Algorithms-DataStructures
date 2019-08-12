@@ -65,7 +65,7 @@ class BreadthFirstSearch {
 
     four.adj = new LinkedList();
     four.adj.add(three);
-
+ 
     System.out.println(BFS(one, new Node(55)));  
    }
 }
