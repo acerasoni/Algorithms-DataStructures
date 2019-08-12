@@ -1,8 +1,12 @@
-/* Simple implementation for an ArrayList of positive integers
-*  ArrayList can only increase in size (in that deletion will not shrink its size) 
-*  An empty slot is represented by -1
-*  Insertion is O(n) amortized to O(1)
-*/
+/**
+ * @author Andrea Cerasoni
+ * My Personal Implementation of an Array List 
+ * Developed to improve my understanding of the data structure
+ * Can hold positive integers and increase in size 
+ * It cannot decrease in size (that is, deletion is allowed but won't shrink the size of the data structure)
+ * An empty slot is represented by -1
+ * Insertion is O(n) amortized to O(1)
+ * */
 
 import java.util.*;
  class ArrayList{
