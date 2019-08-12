@@ -15,27 +15,24 @@ class BreadthFirstSearch {
   public static boolean BFS(Node root, Node target) {
     LinkedList<Node> queue = new LinkedList<>();
     Set<Node> visited = new HashSet<>();
-
     queue.add(root);
     return BFSsearch(target, queue, visited);
   }
 
   public static boolean BFSsearch(Node target, LinkedList<Node> queue, Set<Node> visited) {
-    
-    if(queue.isEmpty()) return false;
+    while(!queue.isEmpty()){
     Node current = queue.remove();
-    System.out.println(current.id); // PRINT THE ORDER OF VISITED NODES
     if(current == target) return true;
-
     visited.add(current);
-    for(Node n : current.adj) {
-      if(visited.contains(n)) continue;
-      queue.add(n);
+       for(Node n : current.adj) {
+         if(visited.contains(n)) continue;
+           queue.add(n);
+       }
     }
-
-    return BFSsearch(target, queue, visited);
-  }
+    
+  return false;
 }
+
 
  public static void main(String[] args) {
     Node one = new Node(1);
@@ -69,5 +66,6 @@ class BreadthFirstSearch {
     four.adj = new LinkedList();
     four.adj.add(three);
 
-    System.out.println(BFS(one, ten));  
-  }
+    System.out.println(BFS(one, new Node(55)));  
+   }
+}
