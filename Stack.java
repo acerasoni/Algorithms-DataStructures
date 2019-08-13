@@ -1,3 +1,9 @@
+/**
+ * @author Andrea Cerasoni
+ * My Personal Implementation of a Stack
+ * Developed to improve my understanding of the data structure
+ * */
+
 class Stack<T> {
   static class Node<T> {
     T data;
