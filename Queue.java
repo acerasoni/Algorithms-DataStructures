@@ -1,3 +1,10 @@
+/**
+ * @author Andrea Cerasoni
+ * My Personal Implementation of a conventional queue 
+ * Developed to improve my understanding of the data structure
+ * Items are added to the tail, and removed from the head
+ * */
+
 class Queue {
   static class Node{ 
     Node next;
