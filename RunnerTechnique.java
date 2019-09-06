@@ -6,7 +6,7 @@
 / You do not know the length of the linked list (but you do know that the length is an even number)"
 / My solution follows. It is a divide and conquer algorithm implemented recursively.
 / The problem was taken from the Linked List section of Cracking The Coding Interview 6th Edition by Gayle Laakmann McDowell 
-/*
+*/
 
 import java.util.HashMap;
 import java.util.Map;
