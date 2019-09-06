@@ -1,6 +1,6 @@
 /**
  * @author Andrea Cerasoni
- * My Personal Implementation of a Singly Linked List
+ * My Personal Implementation of a Hash Table
  * Developed to improve my understanding of the data structure
  * It allows key-value pairs in the form of String-Integer where the Integer is >= 0
  * Utilises chaining to address collisions
